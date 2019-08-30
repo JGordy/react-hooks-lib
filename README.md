@@ -13,16 +13,7 @@ npm install --save @jgordy24/react-hooks-lib
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import { useMyHook } from '@jgordy24/react-hooks-lib'
-
-const Example = () => {
-  const example = useMyHook()
-  return (
-    <div>{example}</div>
-  )
-}
+examples coming soon
 ```
 
 ## License
