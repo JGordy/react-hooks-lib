@@ -12,8 +12,33 @@ npm install --save @jgordy24/react-hooks-lib
 
 ## Usage
 
+### useHover
+
 ```jsx
-examples coming soon
+import React from 'react';
+import { useHover } from '@jgordy24/react-hooks-lib';
+
+const App = () => {
+  const [hoverRef, isHovered] = useHover();
+
+  return (
+    <div>
+      <button
+        ref={hoverRef}
+        style={{
+          backgroundColor: isHovered ? '#424242' : '#121212',
+          color: '#FFF',
+        }}
+      >
+        My Button
+      </button>
+    </div>
+  )
+}
+```
+
+```jsx
+more examples coming soon
 ```
 
 ## License
