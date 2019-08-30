@@ -1,4 +1,5 @@
 export { default as useDarkMode } from './useDarkMode';
+export { default as useDocumentTitle } from './useDocumentTitle';
 export { default as useHover } from './useHover';
 export { default as useLocalStorage } from './useLocalStorage';
 export { default as useMedia } from './useMedia';

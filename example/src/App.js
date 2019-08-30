@@ -19,7 +19,7 @@ const App = (props) => {
     'https://pm28k14qlj.codesandbox.io/test-external-script.js'
   );
 
-  useWhyDidYouUpdate('App', props);
+  useWhyDidYouUpdate('App', props); // NOTE: not working bc there are no props causing rerenders
 
   return (
     <div>
