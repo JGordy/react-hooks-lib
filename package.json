@@ -1,7 +1,7 @@
 {
   "name": "@jgordy24/react-hooks-lib",
   "version": "1.0.1",
-  "description": "&quot;A package of commonly used react hooks&quot;",
+  "description": "A package of commonly used react hooks",
   "author": "JGordy",
   "license": "MIT",
   "repository": "JGordy/@jgordy24/react-hooks-lib",
