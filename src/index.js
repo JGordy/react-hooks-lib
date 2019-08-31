@@ -1,6 +1,7 @@
 export { default as useDarkMode } from './useDarkMode';
 export { default as useDocumentTitle } from './useDocumentTitle';
 export { default as useEventListener } from './useEventListener';
+export { default as useFetch } from './useFetch';
 export { default as useHover } from './useHover';
 export { default as useInputValue } from './useInputValue';
 export { default as useIntersectionObserver } from './useIntersectionObserver';
@@ -8,6 +9,7 @@ export { default as useInterval } from './useInterval';
 export { default as useKeyPressed } from './useKeyPressed';
 export { default as useLocalStorage } from './useLocalStorage';
 export { default as useMedia } from './useMedia';
+export { default as useModal } from './useModal';
 export { default as useScript } from './useScript';
 export { default as useToggle } from './useToggle';
 export { default as useWhyDidYouUpdate } from './useWhyDidYouUpdate';
