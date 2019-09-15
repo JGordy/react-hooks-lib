@@ -7,6 +7,7 @@ export { default as useInputValue } from './useInputValue';
 export { default as useIntersectionObserver } from './useIntersectionObserver';
 export { default as useInterval } from './useInterval';
 export { default as useKeyPressed } from './useKeyPressed';
+export { default as useLightenDarkenColor } from './useLightenDarkenColor';
 export { default as useLocalStorage } from './useLocalStorage';
 export { default as useLockBodyScroll } from './useLockBodyScroll';
 export { default as useMedia } from './useMedia';
