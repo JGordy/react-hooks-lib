@@ -14,7 +14,7 @@ const useFetch = (url, options) => {
                 const res = await fetch(url, { ...options, signal: abortController.signal });
                 const json = await res.json();
                 setResponse(json);
-                setIsLoading(false)
+                setIsLoading(false);
             } catch (error) {
                 setError(error);
             }
