@@ -7,26 +7,26 @@ import url from 'rollup-plugin-url'
 import pkg from './package.json'
 
 export default {
-  input: 'src/index.js',
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: true
-    }
-  ],
-  plugins: [
-    external(),
-    url({ exclude: ['**/*.svg'] }),
-    babel({
-      exclude: 'node_modules/**'
-    }),
-    resolve(),
-    commonjs()
-  ]
+    input: 'src/index.js',
+    output: [
+        file: pkg.main,
+        {
+            format: 'cjs',
+            sourcemap: true
+        },
+        {
+            file: pkg.module,
+            format: 'es',
+            sourcemap: true
+        }
+    ],
+    plugins: [
+        external(),
+        url({ exclude: ['**/*.svg'] }),
+        babel({
+            exclude: 'node_modules/**'
+        }),
+        resolve(),
+        commonjs()
+    ]
 }
