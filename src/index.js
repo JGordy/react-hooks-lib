@@ -14,5 +14,4 @@ export { default as useMedia } from './useMedia';
 export { default as useModal } from './useModal';
 export { default as useScript } from './useScript';
 export { default as useToggle } from './useToggle';
-export { defaut as useWebShareApi } from './useWebShareApi';
 export { default as useWhyDidYouUpdate } from './useWhyDidYouUpdate';
