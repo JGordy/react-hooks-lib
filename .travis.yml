@@ -9,7 +9,7 @@ cache:
 stages:
   - Build and test
   - name: Npm Release
-	if: branch = master
+  if: branch = master
 
 jobs:
   include:
@@ -17,7 +17,7 @@ jobs:
       script:
         - npm run build
         - npm test
-        - stage: Npm Release
+    - stage: Npm Release
       node_js: "lts/*"
 	  before_deploy: |
 		PKG_VERSION=$(node -p "require('./package.json').version")
