@@ -1,15 +1,48 @@
 os: osx
 language: node_js
 node_js:
-	- "lts/*"
+  - "lts/*"
 cache:
-	directories:
-		- node_modules
-script:
-	- npm run build
-	- npm test
-notifications:
+  directories:
+    - node_modules
+
+stages:
+  - Build and test
+  - name: Npm Release
+    if: branch = master
+
+jobs:
+  include:
+    - stage: Build and Test
+      script:
+      - npm run build
+      - npm test
+    - stage: Npm Release
+      node_js: "lts/*"
+      before_deploy: |
+        PKG_VERSION=$(node -p "require('./package.json').version")
+        NPM_TAG="latest"
+        if [[ ${PKG_VERSION} =~ -next$ ]]; then
+          NPM_TAG="next"
+          SHORT_COMMIT_HASH=$(git rev-parse --short HEAD)
+          UNIQ_PKG_VERSION="${PKG_VERSION}.${SHORT_COMMIT_HASH}"
+          npm --no-git-tag-version version ${UNIQ_PKG_VERSION}
+        fi
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        tag: "$NPM_TAG"
+        # script: skip
+        email: $NPM_EMAIL
+        api_key: $NPM_TOKEN
+        skip_cleanup: true
+        on:
+          branch: master
+
+
+# notifications:
 # slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
+
 # deploy:
 #   provider: pages
 #   github_token: $github_token
