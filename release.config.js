@@ -2,11 +2,17 @@ module.exports = {
 	"plugins": [
 		"@semantic-release/commit-analyzer",
 		"@semantic-release/release-notes-generator",
-		"@semantic-release/changelog",
+		[
+			"@semantic-release/changelog",
+			{
+				"changelogFile": "CHANGELOG.md"
+			}
+		],
 		[
 			"@semantic-release/npm",
 			{
-				"tarballDir": "release"
+				"tarballDir": "release",
+				"pkgRoot": "dist/"
 			}
 		],
 		[
@@ -15,7 +21,13 @@ module.exports = {
 				"assets": "release/*.tgz"
 			}
 		],
-		"@semantic-release/git"
+		[
+			"@semantic-release/git",
+			{
+				"assets": "CHANGLELOG.md",
+				"message": "${nextRelease.version} CHANGELOG [skip ci]\n\n${nextRelease.notes}",
+			}
+		]
 	],
 	"preset": "angular"
 }
