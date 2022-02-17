@@ -23,7 +23,7 @@
 		"test:watch": "react-scripts test --env=jsdom"
 	},
 	"peerDependencies": {
-		"react": ">= 16.8.6"
+		"react": ">=16.8.6"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.0.0",
