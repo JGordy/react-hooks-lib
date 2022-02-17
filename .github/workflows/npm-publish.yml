@@ -20,13 +20,7 @@ jobs:
       - run: npm run build
       - run: npm run lint && npm test
       - run: npx semantic-release
-	env:
-	  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-	  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm run build
-      - run: npm run lint && npm test
-	env:
-	  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-	  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npx semantic-release
-	
+	  env:
+	    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+	    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
