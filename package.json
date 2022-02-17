@@ -9,17 +9,17 @@
 	"module": "dist/index.es.js",
 	"jsnext:main": "dist/index.es.js",
 	"engines": {
-		"node": ">=8",
-		"npm": ">=5"
+		"node": ">=12",
+		"npm": ">=6"
 	},
 	"scripts": {
 		"build": "rollup -c",
 		"deploy": "gh-pages -d example/build",
 		"lint": "eslint src",
-		"prepare": "npm run build",
+		"prepare": "npm run build && husky install",
 		"predeploy": "cd example && npm install && npm run build",
 		"start": "rollup -c -w",
-		"test": "cross-env CI=1 react-scripts test --env=jsdom",
+		"test": "cross-env CI=1 react-scripts test --env=jsdom --colors",
 		"test:watch": "react-scripts test --env=jsdom"
 	},
 	"peerDependencies": {
@@ -52,16 +52,20 @@
 		"@rollup/plugin-commonjs": "^21.0.1",
 		"@rollup/plugin-url": "^6.1.0",
 		"babel-eslint": "^10.1.0",
+		"babel-jest": "^27.5.1",
 		"cross-env": "^7.0.3",
 		"eslint": "^7.12.1",
 		"eslint-config-standard-react": "^11.0.1",
 		"eslint-plugin-import": "^2.13.0",
 		"eslint-plugin-react": "^7.10.0",
 		"gh-pages": "^3.2.3",
+		"jest": "^27.5.1",
+		"jest-cli": "^27.5.1",
 		"react": "^16.8.6",
 		"react-scripts": "^5.0.0",
 		"rollup": "^2.67.2",
-		"rollup-plugin-peer-deps-external": "^2.2.0"
+		"rollup-plugin-peer-deps-external": "^2.2.0",
+		"husky": "^7.0.0"
 	},
 	"publishConfig": {
 		"access": "public"
