@@ -2,7 +2,7 @@
 
 > &quot;A package of commonly used react hooks&quot;
 
-[![Build](https://github.com/JGordy/react-hooks-lib/actions/workflows/build-test.yml/badge.svg)](https://github.com/JGordy/react-hooks-lib/actions/workflows/build-test.yml)
+[![NPM](https://img.shields.io/npm/v/@jgordy24/react-hooks-lib.svg)](https://www.npmjs.com/package/@jgordy24/react-hooks-lib) [![Build](https://github.com/JGordy/react-hooks-lib/actions/workflows/build-test.yml/badge.svg)](https://github.com/JGordy/react-hooks-lib/actions/workflows/build-test.yml) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
